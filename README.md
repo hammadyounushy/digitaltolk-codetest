@@ -5,17 +5,14 @@
 - **Code Structure**:  
   The code lacks adherence to best practices and separation of concerns. Controllers contain excessive logic, making them messy and hard to understand for new developers. Each function or class should follow the *single responsibility principle*. Request validation should be moved to dedicated `Request` classes, reducing dependencies and improving maintainability.
 
-- **Repository Pattern**:  
-  If the repository pattern is being followed, all business logic should reside in repositories instead of controllers. Controllers should only handle the interaction between repositories and views or JSON responses.
-
 - **Service Classes**:  
   Introduce `Service` classes to handle business logic. Repositories should be limited to database queries. This separation ensures that if the database changes in the future, only the repository needs to be updated, leaving the business logic untouched.
 
+- **Repository Pattern**:  
+  If the repository pattern is being followed, all business logic should reside in repositories instead of controllers. Controllers should only handle the interaction between repositories and views or JSON responses.
+
 - **Default Values**:  
   Repeatedly setting default values for variables and arrays can be streamlined using a helper method for consistency and reusability.
-
-- **Undefined Variables**:  
-  The presence of undefined variables degrades code quality and should be addressed promptly.
 
 - **Template Messages**:  
   Warning and error messages should be centralized in helpers or templates to avoid duplication.
